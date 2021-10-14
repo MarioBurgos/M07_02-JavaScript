@@ -1,17 +1,8 @@
 var myName = ['M', 'a', 'r', 'i', 'o', ' ', 'e', 's', ' ', 'e', 'l', ' ', 'm', 'e', 'u', ' ', 'n', 'o', 'm'];
-var results = [{ '#': '0' }];
+var results = [];
 
-myName.map(countChars(myName));
+myName.forEach(function(char) {
+    results[char] = (results[char] || 0) + 1;
+
+});
 console.log(results);
-
-/**This method counts the chars and number of reps */
-function countChars(array) {
-    array.forEach(char => {
-        results.forEach(c => {
-            if (c === char) {
-                results.push({ c: +1 });
-            }
-        });
-
-    });
-}
