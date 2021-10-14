@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M07-02-Javascript</title>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container-fluid bg-warning">
+        <div class="container py-5">
+            <!-- TITLE -->
+            <header class="row title text-center">
+                <h1 class="h1">Exercicis de Javascript</h1>
+            </header>
+
+            <main>
+                <article class="row py-5">
+                    <h2>Nivel 1</h2>
+                    <!-- LVL 1: Exercici 1 -->
+                    <section class="col-4">
+                        <div class="card my-3">
+                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 1</h2>
+
+                            <div class="text-end p-3">
+                                <h4 class="result p-3" id="resultEx1Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
+                                <label for="input">Escriu el teu nom: </label>
+                                <input type="text" id="inputWord1">
+                            </div>
+                            <a href="#" class="btn btn-primary m-3" onclick="doEx1Lvl1()">Click!</a>
+                            <div class="card-body bg-light text-justify">
+                                <ol>
+                                    <li>Crea un array amb el teu nom on cada posició correspongui a una lletra.</li>
+                                    <li>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- LVL 1: Exercici 2 -->
+                    <section class="col-4">
+                        <div class="card my-3">
+                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 2</h2>
+                            <div class="text-end p-3">
+                                <h4 class="result p-3" id="resultEx2Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
+                                <label for="input">Escriu una paraula: </label>
+                                <input type="text" id="inputWord2">
+                            </div>
+                            <a href="#" class="btn btn-primary m-3" onclick="doEx2Lvl1()">Click!</a>
+                            <div class="card-body bg-light text-justify">
+                                <ol>
+                                    <li>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. Sinó, imprimeix: ‘He trobat la CONSONTANT: __’.</li>
+                                    <li>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número: __’.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- LVL 1: Exercici 3 -->
+                    <section class="col-4">
+                        <div class="card my-3">
+                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 3</h2>
+                            <div class="text-end p-3">
+                                <h4 class="result p-3" id="resultEx3Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
+                                <label for="input">Escriu una paraula: </label>
+                                <input type="text" id="inputWord3">
+                            </div>
+                            <a href="#" class="btn btn-primary m-3" onclick="doEx3Lvl1()">Click!</a>
+
+                            <div class="card-body bg-light text-justify">
+                                <ol>
+                                    <li>Emmagatzemar en array les lletres i nombre de vegades que apareixen. Utilitza el mètode map().</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- LVL 1: Exercici 4 -->
+                    <section class="col-4">
+                        <div class="card my-3">
+                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 4</h2>
+                            <div class="text-end p-3">
+                                <h4 class="result p-3" id="resultEx4Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
+                                <label for="inputName">Escriu el teu nom: </label>
+                                <input type="text" id="inputName" class="mb-3">
+                                <label for="inputSurname">Escriu el teu cognom: </label>
+                                <input type="text" id="inputSurname">
+                            </div>
+                            <a href="#" class="btn btn-primary m-3" onclick="doEx4Lvl1()">Click!</a>
+                            <div class="card-body bg-light text-justify">
+                                <ol>
+                                    <li>Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.</li>
+                                    <li>Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una que es dirà fullName.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <script src="./lletres.js"></script>
+
+</body>
+
+</html>
