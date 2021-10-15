@@ -8,104 +8,164 @@
     <title>M07-02-Javascript</title>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- JQuery for BS5 -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 </head>
 
 <body>
-
-    <div class="container-fluid bg-warning">
-        <div class="container py-5">
-            <!-- TITLE -->
-            <header class="row title text-center">
-                <h1 class="h1">Exercicis de Javascript</h1>
-            </header>
-
-            <main>
-                <article class="row py-5">
-                    <h2>Nivel 1</h2>
-                    <!-- LVL 1: Exercici 1 -->
-                    <section class="col-4">
-                        <div class="card my-3">
-                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 1</h2>
-
-                            <div class="text-end p-3">
-                                <h4 class="result p-3" id="resultEx1Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
-                                <label for="input">Escriu el teu nom: </label>
-                                <input type="text" id="inputWord1">
-                            </div>
-                            <a href="#" class="btn btn-primary m-3" onclick="doEx1Lvl1()">Click!</a>
-                            <div class="card-body bg-light text-justify">
-                                <ol>
-                                    <li>Crea un array amb el teu nom on cada posició correspongui a una lletra.</li>
-                                    <li>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</li>
-                                </ol>
-                            </div>
+    <div class="container-fluid bg-light">
+        <!-- TITLE -->
+        <header class="row title text-center py-5">
+            <h1 class="h1">Exercicis de Javascript: Nivell 3</h1>
+        </header>
+        <hr>
+        <main class="container py-5">
+            <!-- ACCORDION 1 -->
+            <div class="accordion" id="accordion">
+                <h2 class="h2 py-3">Nivell 1:</h2>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="one">
+                        <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-one" aria-expanded="false" aria-controls="collapse-one">
+                    Exercici 1
+                    </button>
+                    </h2>
+                    <div id="collapse-one" class="accordion-collapse collapse" aria-labelledby="one" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <!-- LVL 1: Exercici 1 -->
+                            <section>
+                                <div class="text-end p-3">
+                                    <h4 class="result p-3 text-start" id="resultEx1Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
+                                    <label for="input">Escriu el teu nom: </label>
+                                    <input type="text" id="inputWord1">
+                                    <button class="btn btn-primary m-3" onclick="doEx1Lvl1()">Click!</button>
+                                </div>
+                                <div class="card-body bg-light text-justify">
+                                    <ol>
+                                        <li>Crea un array amb el teu nom on cada posició correspongui a una lletra.</li>
+                                        <li>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</li>
+                                    </ol>
+                                </div>
+                            </section>
                         </div>
-                    </section>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="two">
+                        <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-two" aria-expanded="false" aria-controls="collapse-two">
+                    Exercici 2
+                    </button>
+                    </h2>
+                    <div id="collapse-two" class="accordion-collapse collapse" aria-labelledby="two" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <!-- LVL 1: Exercici 2 -->
+                            <section>
+                                <div class="text-end p-3">
+                                    <h4 class="result p-3 text-start" id="resultEx2Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
+                                    <label for="input">Escriu una paraula: </label>
+                                    <input type="text" id="inputWord2">
+                                    <button class="btn btn-primary m-3" onclick="doEx2Lvl1()">Click!</button>
+                                </div>
 
-                    <!-- LVL 1: Exercici 2 -->
-                    <section class="col-4">
-                        <div class="card my-3">
-                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 2</h2>
-                            <div class="text-end p-3">
-                                <h4 class="result p-3" id="resultEx2Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
-                                <label for="input">Escriu una paraula: </label>
-                                <input type="text" id="inputWord2">
-                            </div>
-                            <a href="#" class="btn btn-primary m-3" onclick="doEx2Lvl1()">Click!</a>
-                            <div class="card-body bg-light text-justify">
-                                <ol>
-                                    <li>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. Sinó, imprimeix: ‘He trobat la CONSONTANT: __’.</li>
-                                    <li>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número: __’.</li>
-                                </ol>
-                            </div>
+                                <div class="card-body bg-light text-justify">
+                                    <ol>
+                                        <li>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. Sinó, imprimeix: ‘He trobat la CONSONTANT: __’.</li>
+                                        <li>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número: __’.</li>
+                                    </ol>
+                                </div>
+                            </section>
                         </div>
-                    </section>
-
-                    <!-- LVL 1: Exercici 3 -->
-                    <section class="col-4">
-                        <div class="card my-3">
-                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 3</h2>
-                            <div class="text-end p-3">
-                                <h4 class="result p-3" id="resultEx3Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
-                                <label for="input">Escriu una paraula: </label>
-                                <input type="text" id="inputWord3">
-                            </div>
-                            <a href="#" class="btn btn-primary m-3" onclick="doEx3Lvl1()">Click!</a>
-
-                            <div class="card-body bg-light text-justify">
-                                <ol>
-                                    <li>Emmagatzemar en array les lletres i nombre de vegades que apareixen. Utilitza el mètode map().</li>
-                                </ol>
-                            </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="three">
+                        <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-three" aria-expanded="false" aria-controls="collapse-three">
+                    Exercici 3
+                    </button>
+                    </h2>
+                    <div id="collapse-three" class="accordion-collapse collapse" aria-labelledby="three" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <!-- LVL 1: Exercici 3 -->
+                            <section>
+                                <div class="text-end p-3">
+                                    <h4 class="result p-3 text-start" id="resultEx3Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
+                                    <label for="input">Escriu una paraula: </label>
+                                    <input type="text" id="inputWord3">
+                                    <button class="btn btn-primary m-3" onclick="doEx3Lvl1()">Click!</button>
+                                </div>
+                                <div class="card-body bg-light text-justify">
+                                    <ol>
+                                        <li>Emmagatzemar en array les lletres i nombre de vegades que apareixen. Utilitza el mètode map().</li>
+                                    </ol>
+                                </div>
+                            </section>
                         </div>
-                    </section>
-
-                    <!-- LVL 1: Exercici 4 -->
-                    <section class="col-4">
-                        <div class="card my-3">
-                            <h2 class="card-title text-center bg-primary text-light py-2">Exercici 4</h2>
-                            <div class="text-end p-3">
-                                <h4 class="result p-3" id="resultEx4Lvl1">(Prem F12, escriu l'input i després clica el botó)</h4>
-                                <label for="inputName">Escriu el teu nom: </label>
-                                <input type="text" id="inputName" class="mb-3">
-                                <label for="inputSurname">Escriu el teu cognom: </label>
-                                <input type="text" id="inputSurname">
-                            </div>
-                            <a href="#" class="btn btn-primary m-3" onclick="doEx4Lvl1()">Click!</a>
-                            <div class="card-body bg-light text-justify">
-                                <ol>
-                                    <li>Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.</li>
-                                    <li>Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una que es dirà fullName.</li>
-                                </ol>
-                            </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="four">
+                        <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-four" aria-expanded="false" aria-controls="collapse-four">
+                    Exercici 4
+                    </button>
+                    </h2>
+                    <div id="collapse-four" class="accordion-collapse collapse" aria-labelledby="four" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <!-- LVL 1: Exercici 4 -->
+                            <section>
+                                <div class="text-end p-3 d-flex flex-column">
+                                    <h4 class="result p-3 text-start" id="resultEx4Lvl1">(Prem F12, escriu els inputs i després clica el botó)</h4>
+                                    <input type="text" id="inputName" class="mb-3 w-25" placeholder="Name">
+                                    <input type="text" id="inputSurname" class="w-25" placeholder="Surname">
+                                </div>
+                                <button class="btn btn-primary m-3" onclick="doEx4Lvl1()">Click!</button>
+                                <div class="card-body bg-light text-justify">
+                                    <ol>
+                                        <li>Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.</li>
+                                        <li>Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una que es dirà fullName.</li>
+                                    </ol>
+                                </div>
+                            </section>
                         </div>
-                    </section>
+                    </div>
+                </div>
+            </div>
 
-                </article>
-            </main>
-        </div>
+            <!-- ACCORDION 2 -->
+            <div class="accordion" id="accordion">
+                <h2 class="h2 py-3 pt-5">Nivell 2:</h2>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="five">
+                        <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-five" aria-expanded="false" aria-controls="collapse-five">
+                    Exercici 1
+                    </button>
+                    </h2>
+                    <div id="collapse-five" class="accordion-collapse collapse" aria-labelledby="five" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <!-- LVL 2: Exercici 1 -->
+                            <section>
+                                <h3>Detectar emails a dins d'un text (press f12)
+                                </h3>
+                                <hr>
+                                <p class="result text-justify" id="resultEx1Lvl2">'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico.
+                                    Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas
+                                    en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es: La parte del dominio depende del
+                                    dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es
+                                    si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio
+                                    lo tienen como parte del dominio ( nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES ). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar
+                                    libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com
+                                    o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su
+                                    propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email'</p>
+                                <button class="btn btn-primary my-3" onclick="doEx1Lvl2()">Click!</button>
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
 
     <script src="./lletres.js"></script>
